@@ -2,9 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {% load static  %}
+    <link rel="stylesheet" href="{% static 'signup/signup.css' %}">
+
+
+    <!--Bootstrap inclusions-->
+    <link rel="stylesheet" href="{% static 'events/bootstrap.min.css' %}" />
+    <script src="{% static 'events/bootstrap.min.js' %}"></script>
+
+
+    <title>Signup</title>
+
 </head>
 <body>
-$END$
+    <div class="main-box">
+        <div class="sub-box-2">
+            <span class="sub-box-2-heading">
+                HEY YOU!
+            </span>
+            {% block content %}
+            <span class="sub-box-2-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Dolorem neque, eum, vitae nulla doloremque aliquid cupiditate aperiam vel,
+                fugiat fugit molestiae. Deserunt voluptates adipisci ducimus eum aperiam?
+                Repellat ullam doloribus corrupti, dolorem animi fuga, ab tenetur quisquam esse id nulla!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, sit?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, ducimus.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, modi?
+
+            </span>
+        </div>
+        <div class="sub-box-1">
+            <span class="sub-box-1-heading">
+                SIGNUP
+            </span>
+            <span class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+            <div class="form-things">
+                 <form method="post">
+                     {% csrf_token %}
+                    <div class="form-group">
+
+                        <input type="text" class="form-control" placeholder="Enter Username" name="username">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your username with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" required="" placeholder="Password" name="password1">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" required="" placeholder="Retype Password" name="password2">
+                    </div>
+                    <button type="submit" class="btn btn-primary" name="_save">Signup</button>
+                </form>
+        </div>
+
+    </div>
+    {% endblock %}
+
+     <!-- Left Bar -->
+    <section class="section-leftbar">
+        <div class="leftbar">
+        </div>
+    </section>
+
 </body>
 </html>

@@ -9,6 +9,9 @@ class Event(models.Model):
     contact = models.CharField(max_length=13, default='+91')
 
 
+class Registrations(models.Model):
+    title = models.CharField(max_length=200)
+    email = models.EmailField(max_length=40)
 
 
 

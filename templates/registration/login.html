@@ -25,17 +25,7 @@
                 HEY YOU!
             </span>
         {% block content %}
-            {% if form.errors %}
-                <p>Your username and password didn't match. Please try again.</p>
-            {% endif %}
-            {% if next %}
-            {% if user.is_authenticated %}
-                <p>Your account doesn't have access to this page. To proceed,
-                    please login with an account that has access.</p>
-            {% else %}
-                    <p>Please login to see this page.</p>
-            {% endif %}
-        {% endif %}
+
             <span class="sub-box-2-text">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem neque, eum, vitae nulla doloremque aliquid cupiditate aperiam
                 vel, fugiat fugit molestiae. Deserunt voluptates adipisci ducimus eum aperiam? Repellat ullam doloribus corrupti,
@@ -51,7 +41,7 @@
             </span>
             <span class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
             <div class="form-things">
-                <form method="post" action="{% url 'login' %}>
+                <form method="post">
                 {% csrf_token %}
                     <div class="form-group">
 
@@ -61,15 +51,23 @@
                     <div class="form-group">
                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
                     </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Keep me signed in</label>
-                    </div>
                     <input type="submit" class="btn btn-primary" value="Login"></input>
+
                     <input type="hidden" name="next" value="{% url 'events:index' %}" />
                 </form>
+                <a href="{% url 'signup' %}" class="btn btn-primary signup-btn">Signup</a>
             </div>
-
+            {% if form.errors %}
+                <span class="error-message"><p>Your username and password didn't match. Please try again.</p>
+            {% endif %}
+            {% if next %}
+            {% if user.is_authenticated %}
+                <p>Your account doesn't have access to this page.<br>
+                    To proceed, please login with an account that has access.</p>
+            {% else %}
+                <p>Please login to see this page.</p></span>
+            {% endif %}
+            {% endif %}
         </div>
         {% endblock %}
         <!-- Left Bar -->

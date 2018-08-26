@@ -44,6 +44,23 @@
                 <li class="nav-item mynav-items">
                     <a class="nav-link" href="#">About</a>
                 </li>
+                <li class="nav-item mynav-items">
+
+                        {% if user.is_authenticated %}
+                            <a class="nav-link"  href="{% url 'logout' %}">
+                            <span style="text-transform: capitalize;">{{ user.username }} --> Logout</span>
+                            </a>
+                        {% else %}
+                            <a href="{% url 'login' %}" class="nav-link">Login</a>
+                        {% endif %}
+
+                </li>
+                {% if user.is_authenticated %}
+                {% else %}
+                     <li class="nav-item mynav-items">
+                        <a class="nav-link"  href="{% url 'signup' %}">Signup</a>
+                    </li>
+                {% endif %}
             </ul>
 
             <!--<form class="form-inline" action="#">

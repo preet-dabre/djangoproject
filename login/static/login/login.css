@@ -91,3 +91,15 @@ body{
     top: 275px;
     left: 200px;
 }
+
+.error-message{
+    position: relative;
+    top: 400px;
+    left: 100px;
+}
+
+.signup-btn{
+    position: relative;
+    left: 80px;
+    top: -37px;
+}
