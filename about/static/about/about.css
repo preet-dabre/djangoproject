@@ -1,0 +1,97 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.mynav-items {
+    padding-left: 100px;
+}
+
+.about-elements {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.0);
+    width: 1300px;
+    height: 600px;
+    top: 50px;
+    left: 90px;
+}
+
+.title-format {
+    position: relative;
+    left: 250px;
+}
+
+.panorama-text {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.box {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    top: 220px;
+}
+
+.box-1 {
+    left: 0px;
+}
+
+.box-2 {
+    left: 450px;
+}
+
+.box-3 {
+    left: 900px;
+}
+
+.idea {
+    position: relative;
+    left: 120px;
+    height: 200px;
+}
+
+.capture {
+    position: relative;
+    left: 70px;
+    height: 200px;
+}
+
+.putit {
+    position: relative;
+    left: 40px;
+    height: 200px;
+}
+
+.box-title {
+    font-size: 20px;
+    position: absolute;
+    top: 220px;
+}
+
+.box-1-title {}
+
+.box-2-title {
+    left: 150px;
+}
+
+.box-3-title {
+    left: 180px;
+}
+
+.box-text {
+    position: absolute;
+    top: 270px;
+}
+
+.box-1-text {
+    left: 20px;
+}
+
+.box-2-text {
+    left: 70px;
+}
+
+.box-3-text {
+    left: 130px;
+}

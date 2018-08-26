@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #fcf9f9;
+}
+.mynav-items{
+    padding-left: 100px;
+}
+
+.poster-heading{
+    position: relative;
+    top: 100px;
+    left: 525px;
+    width: 400px;
+}
+.section-leftbar{
+    position: relative;
+    top: 150px;
+}
+.leftbar{
+    float: left;
+    height: 450px;
+    width: 10px;
+    background-color: rgb(0, 255, 0);
+    box-shadow: -5px 5px 5px #aaa;
+}
+
+
+.section-events{
+    background-color: white;
+    height: 700px;
+
+}
+.event-cards{
+   position: relative;
+   top: 180px;
+   left: 155px;
+
+}
+.event-card{
+    background-clip: border-box;
+    background-color: white;
+
+    margin-right: 40px;
+    height: 350px;
+    perspective: 1000;
+    z-index: 1;
+}
+
+.event-card-1{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s linear;
+    box-shadow: -5px 5px 5px #aaa;
+}
+
+.event-card:hover .event-card-1{
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+
+.face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+
+.card-front-face{
+    background-color: rgb(248, 44, 44);
+    width: 100%;
+    height: 100%;
+
+}
+
+.top{
+    position: relative;
+    background-color: rgb(54, 54, 54);
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+
+
+
+
+.card-back-face{
+    display: block;
+    width: 100%;
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    background: black;
+
+}
+
+.category-title{
+    position: relative;
+    top: 0px;
+    left: 30px;
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+
+}
+
+.college-name{
+    position: relative;
+    top: -10px;
+    font-size: 15px;
+    font-weight: 400;
+}
